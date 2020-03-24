@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url(../img/island.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #fff;
+    height: 100%;
+}
+
+@font-face {
+    font-family: TT2020Base;
+    src: url(../fonts/18776.otf);
+}
+
+@font-face {
+    font-family: STIX-Two-Text;
+    src: url(../fonts/18637.otf);
+}
+
+@font-face {
+    font-family: Comic Sans MS;
+    src: url(fonts/2006.ttf);
+}
+
+@font-face {
+    font-family: Jet Set;
+    src: url(fonts/17498.ttf);
+}
+
+h1 {
+    font-family: TT2020Base;
+    font-size: 40px;
+    color: #fff;
+    margin-left: 440px;
+    margin-top: 60px;
+}
+
+h2 {
+    font-family: STIX-Two-Text;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.topnav {
+    background-color: #000;
+    overflow: hidden;
+    position: sticky;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: .5s;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.body {
+    background-color: #fff;
+    margin-top: 250px;
+    width: 1520px;
+    height: 1250px;
+}
+
+h3 {
+    font-family: TT2020Base;
+    font-size: 25px;
+    margin-left: 570px;
+    padding-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.block a,
+.block1 a {
+    display: inline-block;
+    color: #000;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.block a:after,
+.block1 a:after {
+    text-decoration: none;
+    margin-top: -4px;
+    background-color: #fff;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+
+.block a:hover:after,
+.block1 a:hover:after,
+.block a:focus:after,
+.block1 a:focus:after {
+    text-decoration: none;
+    margin-top: -4px;
+    width: 100%;
+}
+
+.block,
+.block1 {
+    float: left;
+    height: 220px;
+    margin-left: 240px;
+    font-size: 40px;
+    background: #F6F6E1;
+    color: #000;
+    margin-top: 60px;
+    cursor: pointer;
+    width: 420px;
+    border-radius: 10px;
+    margin-right: 10px;
+    text-align: center;
+    transition: .3s;
+}
+
+.block p,
+.block1 p {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.block:hover,
+.block1:hover {
+    background-color: #365B80;
+    color: #fff;
+    margin-top: 55px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.block:hover .oblast,
+.block1:hover .viktorina {
+    color: #fff;
+    transition: 0.32s;
+}
+
+.map-icon {
+    width: 15%;
+    margin-top: 20px;
+}
+
+.question {
+    width: 7%;
+    margin-top: 20px;
+}
+
+.text1 {
+    margin-top: 400px;
+    margin-left: 350px;
+    font-size: 35px;
+    letter-spacing: 15px;
+    font-family: TT2020Base;
+}
+
+blockquote {
+    white-space: normal;
+    border-top: 5px solid #EAF9F9;
+    border-bottom: 5px solid #EAF9F9;
+    color: #3A3C55;
+    padding: 30px 30px 30px 90px;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+blockquote:before {
+    font-family: serif;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    background: #FB6652;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 50px;
+    line-height: 1.35;
+    text-align: center;
+}
+
+blockquote p {
+    margin: 0 0 16px;
+    font-size: 18px;
+    letter-spacing: .05em;
+    line-height: 1.4;
+}
+
+blockquote cite {
+    font-style: normal;
+}
+
+.tree {
+    object-fit: cover;
+    max-width: 50%;
+    margin-top: 20px;
+    margin-left: 232px;
+}
+
+footer {
+    background-color: #365B80;
+    height: 6%;
+    margin-top: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 13px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bbody {
+    background-color: #fff;
+    height: 180%;
+}
+
+.timer {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.start {
+    font-size: 20px;
+    margin-left: 636px;
+    margin-top: 30px;
+    background-color: #555;
+    color: #fff;
+    border-color: #fff;
+    height: 60px;
+    font-weight: 600;
+    width: 250px;
+    cursor: pointer;
+    transition: .5s;
+    font-family: TT2020Base;
+}
+
+.start:hover {
+    background-color: #fff;
+    color: #333;
+    border-color: #000;
+}
+
+.bbody h1 {
+    margin-left: 650px;
+    margin-top: 0px;
+    color: #000;
+}
+
+.br {
+    background-color: #00b3aa;
+    height: 20px;
+}
+
+#list6 {
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+}
+
+#list6 ol {
+    list-style-type: upper-roman;
+    color: #eee;
+    font-size: 14px;
+    list-style-position: inside;
+}
+
+#list6 ol li {
+    background-color: #00b3aa;
+    color: #000;
+    width: 100%;
+}
+
+.img {
+    height: auto;
+    width: 100%;
+    max-width: 720px;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    h1 {
+        margin-left: 360px;
+    }
+    h3 {
+        margin-left: 460px;
+    }
+    .body {
+        width: 100%;
+    }
+    .block,
+    .block1 {
+        height: 220px;
+        margin-left: 200px;
+        font-size: 40px;
+        background: #F6F6E1;
+        color: #000;
+        margin-top: 60px;
+        width: 380px;
+        border-radius: 10px;
+        margin-right: 10px;
+        text-align: center;
+        transition: .5s;
+    }
+    .bbody h1 {
+        margin-left: 555px;
+    }
+    .tree {
+        margin-left: 136px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    h2 {
+        text-align: center;
+    }
+    .text1 {
+        margin-left: 450px;
+    }
+    .mountain {
+        max-width: 44%;
+    }
+}
+
+
+/* Iphone 4/Iphone 5/SE */
+
+@media only screen and (max-width: 320px) {
+    .topnav {
+        width: 100%;
+    }
+    h1 {
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        margin-left: 20px;
+        font-size: 15px;
+    }
+    .block,
+    .block1 {
+        height: 180px;
+        margin-left: 30px;
+        font-size: 40px;
+        background: #F6F6E1;
+        color: #000;
+        margin-top: 50px;
+        width: 250px;
+        border-radius: 10px;
+        margin-right: 10px;
+        text-align: center;
+        transition: .3s;
+    }
+    .block p,
+    .block1 p {
+        font-size: 17px;
+    }
+    .block a,
+    .block1 a {
+        font-size: 30px;
+    }
+    .body {
+        overflow-y: hidden;
+        position: relative;
+        height: 1075px;
+        width: 100%;
+    }
+    .text1 {
+        font-size: 15px;
+        margin-left: 20px;
+        margin-top: 500px;
+    }
+    blockquote p {
+        margin-left: -50px;
+    }
+    .footer {
+        margin-top: 10px;
+    }
+    .tree {
+        display: none;
+    }
+    .footer {
+        margin-top: 2482px;
+        height: 8%;
+    }
+    .bbody h1 {
+        margin-left: 110px;
+    }
+    .img {
+        margin-top: -15px;
+    }
+}
+
+
+/* Galaxy S5 */
+
+@media only screen and (min-width: 360px) and (max-width: 360px) {
+    h1 {
+        font-size: 18px;
+        margin-left: 0px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .block,
+    .block1 {
+        height: 200px;
+        margin-left: 20px;
+        font-size: 40px;
+        background: #F6F6E1;
+        color: #000;
+        margin-top: 50px;
+        width: 320px;
+        border-radius: 10px;
+        margin-right: 10px;
+        text-align: center;
+        transition: .3s;
+    }
+    .text1 {
+        font-size: 18px;
+        margin-left: 50px;
+        margin-top: 530px;
+    }
+    blockquote {
+        margin-left: -60px;
+    }
+    .tree {
+        display: none;
+    }
+    .body {
+        height: 1000px
+    }
+    .footer {
+        margin-top: 2070px;
+        height: 8%;
+    }
+    .bbody h1 {
+        margin-left: 20px;
+    }
+    .img {
+        margin-top: -15px;
+    }
+}
+
+
+/* Iphone 6/7/8/X*/
+
+@media only screen and (min-width: 375px) and (max-width: 375px) {
+    h3 {
+        margin-left: 25px;
+    }
+    .block,
+    .block1 {
+        margin-left: 35px;
+    }
+    .text1 {
+        margin-left: 60px;
+    }
+    .tree {
+        display: none;
+    }
+    .body {
+        height: 1075px;
+    }
+    h1 {
+        font-size: 18px;
+        margin-left: 0px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .block,
+    .block1 {
+        height: 200px;
+        margin-left: 20px;
+        font-size: 40px;
+        background: #F6F6E1;
+        color: #000;
+        margin-top: 50px;
+        width: 320px;
+        border-radius: 10px;
+        margin-right: 10px;
+        text-align: center;
+        transition: .3s;
+    }
+    .text1 {
+        font-size: 18px;
+        margin-left: 50px;
+        margin-top: 530px;
+    }
+    blockquote {
+        margin-left: -60px;
+    }
+    .footer {
+        margin-top: 1903px;
+        height: 8%;
+    }
+    .bbody h1 {
+        margin-left: 20px;
+    }
+    .img {
+        margin-top: -15px;
+    }
+}
+
+
+/* Pixel 2/2 XL, Iphone 6/7/8/Plus */
+
+@media only screen and (min-width: 411px) and (max-width: 480px) {
+    h3 {
+        margin-left: 50px;
+    }
+    .block,
+    .block1 {
+        margin-left: 18px;
+    }
+    .text1 {
+        margin-left: 60px;
+        font-size: 20px;
+        margin-top: 600px;
+    }
+    .body {
+        width: 101%;
+        height: 1110px;
+    }
+    .tree {
+        display: none;
+    }
+    h1 {
+        font-size: 18px;
+        margin-left: 0px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    blockquote {
+        margin-left: -60px;
+    }
+    .footer {
+        margin-top: 1535px;
+    }
+    .bbody h1 {
+        margin-left: 20px;
+    }
+    .img {
+        margin-top: -15px;
+    }
+}
+
+@media only screen and (min-width: 411px) and (max-width: 480px) and (max-height: 823px) {
+    .footer {
+        margin-top: 1370px;
+    }
+}
+
+@media only screen and (min-width: 411px) and (max-width: 480px) and (max-height: 823px) {
+    .footer {
+        margin-top: 1529px;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 375px) and (max-height: 812px) {
+    .footer {
+        margin-top: 1642px;
+        height: 5%;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 480px) {
+    h1 {
+        margin-left: 67px;
+    }
+    h3 {
+        margin-left: 85px;
+    }
+    .block,
+    .block1 {
+        margin-left: 95px;
+    }
+    .text1 {
+        margin-left: 90px;
+    }
+}
+
+
+/* Ipad, Ipad mini */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    h1 {
+        margin-left: 145px;
+        font-size: 30px;
+    }
+    h3 {
+        margin-left: 200px;
+    }
+    .text1 {
+        margin-top: 600px;
+        margin-left: 100px;
+        font-size: 30px;
+    }
+    .tree {
+        margin-top: 10px;
+    }
+    footer {
+        height: 5%;
+    }
+    .bbody {
+        height: 171%;
+    }
+    .bbody h1 {
+        margin-left: 300px;
+    }
+    .img {
+        width: 49.5%;
+    }
+    .tree {
+        margin-left: 99px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1024px) {
+    h1 {
+        margin-left: 280px;
+    }
+    h3 {
+        margin-left: 320px
+    }
+    .block,
+    .block1 {
+        margin-left: 80px;
+    }
+    .text1 {
+        margin-top: 320px;
+    }
+    footer {
+        height: 4%;
+    }
+    .body {
+        height: 1000px;
+    }
+    .bbody {
+        height: 110%;
+    }
+    .bbody h1 {
+        margin-left: 450px;
+    }
+    .img {
+        margin-top: -15px;
+    }
+    .tree {
+        margin-left: 134px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .body {
+        width: 100%;
+        height: 142%;
+    }
+    .tree {
+        margin-left: 283px;
+    }
+    .bbody {
+        height: 151.5%;
+    }
+}
